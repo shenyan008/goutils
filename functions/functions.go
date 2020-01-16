@@ -14,6 +14,25 @@ func NamedFormatString(format string, m map[string]interface{}) string {
 	return format
 }
 
+
+func StringInSlice(a string, list []string) bool {
+	for _, b := range list {
+		if b == a {
+			return true
+		}
+	}
+	return false
+}
+
+func IntInSlice(a int, list []int) bool {
+	for _, b := range list {
+		if b == a {
+			return true
+		}
+	}
+	return false
+}
+
 // generic version
 func InSlice(v interface{}, l []interface{}) bool {
 	if v == nil || l == nil || len(l) == 0 {
